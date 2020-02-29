@@ -3,7 +3,8 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text.Json.Serialization;
+using System.Text.Json;
+using HourglassAnalyzer.H5MatchEvents;
 
 
 namespace HourglassAnalyzer
@@ -11,42 +12,34 @@ namespace HourglassAnalyzer
     public class EventGrabber
     {
         private string apiKey;
-        private string endpoint;
+        private string baseEventURI;
 
-        public EventGrabber(string id, string key, string baseURI)
+        public EventGrabber(string key, string baseURI)
         {
             apiKey = key;
-            endpoint = baseURI + "matches/" + id + @"/events";
-
+            baseEventURI = baseURI;            
         }
-
-        public void PrintEventsFromMatch()
+        public async Task<H5MatchEventSet> GetEventSetFromMatch(string matchID)
         {
-            Console.WriteLine(endpoint);
-            GetEventsFromMatch().Wait();
+            string endpoint = BuildEndpoint(baseEventURI, matchID);
 
-        }
-
-        private async Task GetEventsFromMatch()
-        {
             var client = new HttpClient();
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", apiKey);
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
 
-            var stringTask = client.GetStringAsync(endpoint);
+            var streamTask = client.GetStreamAsync(endpoint);
+            var events = await JsonSerializer.DeserializeAsync<H5MatchEventSet>(await streamTask);
 
-            var msg = await stringTask;
-            Console.WriteLine(msg);
-            return;
-//            return response;
+            return events;
         }
 
-
-
+        private string BuildEndpoint(string baseURI, string id)
+        {
+            return baseURI + @"matches/" + id + @"/events";
+        }
 
     }
-
 
 }
