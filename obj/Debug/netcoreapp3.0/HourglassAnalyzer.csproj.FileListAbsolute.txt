@@ -1,0 +1,15 @@
+C:\dev\dotnet\halo\HourglassAnalyzer\bin\Debug\netcoreapp3.0\HourglassAnalyzer.exe
+C:\dev\dotnet\halo\HourglassAnalyzer\bin\Debug\netcoreapp3.0\HourglassAnalyzer.deps.json
+C:\dev\dotnet\halo\HourglassAnalyzer\bin\Debug\netcoreapp3.0\HourglassAnalyzer.runtimeconfig.json
+C:\dev\dotnet\halo\HourglassAnalyzer\bin\Debug\netcoreapp3.0\HourglassAnalyzer.runtimeconfig.dev.json
+C:\dev\dotnet\halo\HourglassAnalyzer\bin\Debug\netcoreapp3.0\HourglassAnalyzer.dll
+C:\dev\dotnet\halo\HourglassAnalyzer\bin\Debug\netcoreapp3.0\HourglassAnalyzer.pdb
+C:\dev\dotnet\halo\HourglassAnalyzer\obj\Debug\netcoreapp3.0\HourglassAnalyzer.csprojAssemblyReference.cache
+C:\dev\dotnet\halo\HourglassAnalyzer\obj\Debug\netcoreapp3.0\HourglassAnalyzer.AssemblyInfoInputs.cache
+C:\dev\dotnet\halo\HourglassAnalyzer\obj\Debug\netcoreapp3.0\HourglassAnalyzer.AssemblyInfo.cs
+C:\dev\dotnet\halo\HourglassAnalyzer\obj\Debug\netcoreapp3.0\HourglassAnalyzer.dll
+C:\dev\dotnet\halo\HourglassAnalyzer\obj\Debug\netcoreapp3.0\HourglassAnalyzer.pdb
+C:\dev\dotnet\halo\HourglassAnalyzer\bin\Debug\netcoreapp3.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\dev\dotnet\halo\HourglassAnalyzer\bin\Debug\netcoreapp3.0\System.Text.Encodings.Web.dll
+C:\dev\dotnet\halo\HourglassAnalyzer\bin\Debug\netcoreapp3.0\System.Text.Json.dll
+C:\dev\dotnet\halo\HourglassAnalyzer\obj\Debug\netcoreapp3.0\HourglassAnalyzer.csproj.CopyComplete
